@@ -15,7 +15,7 @@ const IndexPage = () => {
         </Grid>
         <Grid item xs={12} md={4} lg={4} xl={4}>
           <Typography variant="h1">
-            Hello World
+            Hello World 1
           </Typography>
         </Grid>
       </Grid>
