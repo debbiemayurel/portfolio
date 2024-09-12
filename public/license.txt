@@ -1,0 +1,11 @@
+Model Information:
+* title:	among us realista BLENDER
+* source:	https://sketchfab.com/3d-models/among-us-realista-blender-a811135739ab450d80153c1b02d6482f
+* author:	GregoryXDDD (https://sketchfab.com/GregoryXDDD)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "among us realista BLENDER" (https://sketchfab.com/3d-models/among-us-realista-blender-a811135739ab450d80153c1b02d6482f) by GregoryXDDD (https://sketchfab.com/GregoryXDDD) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
