@@ -55,7 +55,7 @@ const IndexPage = () => {
                     <ExperenceWork/>
                 </Box>
                 <Box>
-                    <SwiperProjects title='Projects Completed for Clients' listProjects={projectsWork}/>
+                    <SwiperProjects title='Completed Projects' listProjects={projectsWork}/>
                 </Box>
             </Container>
         </Layout>
