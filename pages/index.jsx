@@ -1,67 +1,65 @@
-import React from 'react'
-import { Box, Button, Grid, Typography } from '@mui/material'
-import Navbar from '@/components/ui/Navbar'
-import Layout from '@/components/layout/Layout'
-import Scene from '@/components/scene/Scene'
-import ListTecnhologies from '@/components/ui/ListTecnhologies'
-
+import React from 'react';
+import { Box, Button, Typography, Container, Grid2 } from '@mui/material';
+import Layout from '@/components/layout/Layout';
+import Scene from '@/components/scene/Scene';
+import ListTecnhologies from '@/components/ui/ListTecnhologies';
+import ExperenceWork from '@/components/utils/ExperenceWork';
+import SwiperProjects from '@/components/utils/SwiperProjects';
+import projectsWork from '@/utils/ListProjectsWork';
 
 const IndexPage = () => {
     return (
         <Layout title="Portfolio - Home" pageDescription="Home">
-            <Grid container display="flex" justifyContent="center" mt={10} height="0vh">
-                <Grid item xs={12} md={7} lg={7} xl={7}>
-                <Box>
-                    <Typography variant="h1" sx={{fontSize:46,color:'#fff'}}>
-                        {`Hi, I'm Juan Puertas!`}
-                    </Typography>
-                    <Typography variant="h1" sx={{fontSize:46,color:'#fff'}}>
-                        Developer 
-                    <Typography variant='h1' component='span' color='primary' sx={{fontSize:46}}> Web</Typography>
-                    </Typography>
-                    <Typography variant='body1' color='#fff' mt={4}>
-                        I am a web developer proficient in multiple programming languages, frameworks, code reviews, and automated testing. I excel in web development, utilizing my skills and creativity to build dynamic and robust applications.
-                    </Typography>
+            <Container maxWidth="xll" sx={{ mt: 10, minHeight: '100vh' }}>
+                <Grid2 container spacing={4}>
+                    <Grid2 size={{ xs: 12, md: 8 }}>
+                        <Box>
+                            <Typography variant="h1" sx={{ fontSize: { xs: 36, md: 46 }, color: '#fff' }}>
+                                {`Hi, I'm Juan Puertas!`}
+                            </Typography>
+                            <Typography variant="h1" sx={{ fontSize: { xs: 36, md: 46 }, color: '#fff' }}>
+                                Developer <Typography component="span" color="primary" sx={{ fontSize: 'inherit' }}>Web</Typography>
+                            </Typography>
+                            <Typography variant="body1" color="text.secondary" sx={{ mt: 4, color: '#fff' }}>
+                                I am a web developer proficient in multiple programming languages, frameworks, code reviews, and automated testing. I excel in web development, utilizing my skills and creativity to build dynamic and robust applications.
+                            </Typography>
+                        </Box>
+                        <Button variant="contained" sx={{ mt: 4, borderRadius: 1 }}>
+                            Show More
+                        </Button>
+                        <Grid2 container spacing={2} sx={{ mt: 4 }}>
+                            {[
+                                { value: '1+', label: 'Year of experience' },
+                                { value: '7', label: 'Projects created for clients' },
+                                { value: '1', label: 'Personal project' }
+                            ].map((item, index) => (
+                                <Grid2 size={{ xs: 12, sm: 4 }} key={index}>
+                                    <Typography variant="h4" fontWeight="bold" color="#fff">
+                                        {item.value}
+                                    </Typography>
+                                    <Typography variant="subtitle1" color="#fff">
+                                        {item.label}
+                                    </Typography>
+                                </Grid2>
+                            ))}
+                        </Grid2>
+                        <ListTecnhologies />
+                    </Grid2>
+                    <Grid2 size={{ xs: 12, md: 4 }}>
+                        <Box>
+                            <Scene />
+                        </Box>
+                    </Grid2>
+                </Grid2>
+                <Box width={'100%'}>
+                    <ExperenceWork/>
                 </Box>
-                <Button variant='contained' sx={{mt:4, borderRadius:1}}>
-                    Show More
-                </Button>
-                <Grid container mt={4} display='flex' gap={1}>
-                    <Grid item xs={12} sm={12} md={6} lg={3.5}>
-                        <Typography variant="h4" fontWeight='bold' sx={{color:'#fff'}}>
-                            {`1+`}
-                        </Typography>
-                        <Typography variant="subtitle1" sx={{color:'#fff'}}>
-                            {`Year of experience`}
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={6} lg={3.5}>
-                        <Typography variant="h4" fontWeight='bold' sx={{color:'#fff'}}>
-                            {`7`}
-                        </Typography>
-                        <Typography variant="subtitle1" sx={{color:'#fff'}}>
-                            {`Projects created to client`}
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={6} lg={3.5}>
-                        <Typography variant="h4" fontWeight='bold' sx={{color:'#fff'}}>
-                            {`1`}
-                        </Typography>
-                        <Typography variant="subtitle1" sx={{color:'#fff'}}>
-                            {`Project personal`}
-                        </Typography>
-                    </Grid>
-                </Grid>
-                <ListTecnhologies/>
-                </Grid>
-                <Grid item xs={12} md={5} lg={5} xl={5}>
                 <Box>
-                    <Scene/>
+                    <SwiperProjects title='Projects Completed for Clients' listProjects={projectsWork}/>
                 </Box>
-                </Grid>
-            </Grid>
+            </Container>
         </Layout>
-    )
-}
+    );
+};
 
-export default IndexPage
+export default IndexPage;

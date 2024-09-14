@@ -1,14 +1,12 @@
 import React from 'react'
 import { Box, Grid, Typography } from '@mui/material'
 import technologies from '@/utils/ListTecnhologies'
-import Image from 'next/image'
-
 
 const ListTecnhologies = () => {
     return (
-        <Box minHeight={'500px'} mt={2}>
+        <Box mt={2}>
             <Typography variant="subtitle1" sx={{color:'#fff', fontSize:32}}>
-                Services
+                Technologies
             </Typography>
             <Grid container spacing={1} mt={2}>
                 {technologies.map((tech, index) => (
