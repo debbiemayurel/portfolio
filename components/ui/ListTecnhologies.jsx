@@ -6,8 +6,8 @@ import Image from 'next/image'
 
 const ListTecnhologies = () => {
     return (
-        <Box minHeight={'500px'} p={3}>
-            <Typography  variant="h1" sx={{fontSize:46,color:'#fff'}}>
+        <Box minHeight={'500px'} mt={2}>
+            <Typography variant="subtitle1" sx={{color:'#fff', fontSize:32}}>
                 Services
             </Typography>
             <Grid container spacing={1} mt={2}>
@@ -34,7 +34,7 @@ const ListTecnhologies = () => {
                                 component='img'
                                 src={tech.imagePath} 
                                 alt={tech.name} 
-                                style={{ width: '100%', height: '150px', objectFit: 'contain' }}
+                                style={{ width: '100%', height: '60px', objectFit: 'contain' }}
                             />
                         </Box>
                     </Grid>

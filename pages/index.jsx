@@ -9,7 +9,7 @@ import ListTecnhologies from '@/components/ui/ListTecnhologies'
 const IndexPage = () => {
     return (
         <Layout title="Portfolio - Home" pageDescription="Home">
-            <Grid container display="flex" justifyContent="center" mt={10} height="100vh">
+            <Grid container display="flex" justifyContent="center" mt={10} height="0vh">
                 <Grid item xs={12} md={7} lg={7} xl={7}>
                 <Box>
                     <Typography variant="h1" sx={{fontSize:46,color:'#fff'}}>
@@ -52,6 +52,7 @@ const IndexPage = () => {
                         </Typography>
                     </Grid>
                 </Grid>
+                <ListTecnhologies/>
                 </Grid>
                 <Grid item xs={12} md={5} lg={5} xl={5}>
                 <Box>
@@ -59,7 +60,6 @@ const IndexPage = () => {
                 </Box>
                 </Grid>
             </Grid>
-            <ListTecnhologies/>
         </Layout>
     )
 }
