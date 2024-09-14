@@ -17,7 +17,8 @@ const Layout = ({children, title, pageDescription}) => {
             <Box sx={{
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                minHeight: '100vh'
+                minHeight: '100vh',
+                bg:'#141414',
             }}>
 
                 <Navbar/>
