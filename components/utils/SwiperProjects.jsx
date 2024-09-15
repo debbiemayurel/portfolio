@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Box, Typography } from '@mui/material'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards } from 'swiper/modules';
@@ -7,6 +7,12 @@ import 'swiper/css';
 import 'swiper/css/effect-cards';
 
 const SwiperProjects = ({listProjects, title}) => {
+    const [currentImage, setCurrentImage] = useState(listProjects[0]);
+    console.log('imagen actual', currentImage)
+    const handleSlideChange = (swiper) => {
+        const currentIndex = swiper.activeIndex;
+        setCurrentImage(listProjects[currentIndex]);
+    };
     return (
         <Box mt={5}>
             <Typography variant="subtitle1" textAlign='center' sx={{ color: '#fff', fontSize: 32, mb: 2 }}>
@@ -16,17 +22,19 @@ const SwiperProjects = ({listProjects, title}) => {
                 effect={'cards'}
                 grabCursor={true}
                 modules={[EffectCards]}
+                onSlideChange={handleSlideChange}
                 className="mySwiper"
                 style={{
-                    width: '420px',
-                    height: '320px'
+                    width: '620px',
+                    height: '320px',
+                    //margin: '0px'
                 }}
             >
                 {listProjects.map((project, index) => (
                     <SwiperSlide 
                         key={index} 
                         style={{
-                            borderRadius: 5,
+                            borderRadius: 10,
                             overflow: 'hidden' // Asegura que la imagen no sobresalga del borde redondeado
                         }}
                     >
@@ -71,7 +79,6 @@ const SwiperProjects = ({listProjects, title}) => {
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <img src="/projects/work/" alt="" />
         </Box>
     );
 }

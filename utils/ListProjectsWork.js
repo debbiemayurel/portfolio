@@ -1,12 +1,12 @@
 const publicImagesPath = '/projects/work/';
 
 const availableImages = [
-    'helpCenter.jpeg',
-    'supportCenter.jpeg',
+    {image:'helpCenter.jpeg', name:'Centro de Ayuda'},
+    {image:'supportCenter.jpeg', name:'Centro de Soporte'}
 ];
 
-const projectsWork = availableImages.map(image => ({
-  name: image.split('.')[0],
+const projectsWork = availableImages.map(({ image, name }) => ({
+  name,
   imagePath: `${publicImagesPath}${image}`
 }));
 

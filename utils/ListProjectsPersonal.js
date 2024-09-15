@@ -1,12 +1,12 @@
 const publicImagesPath = '/projects/personal/';
 
 const availableImages = [
-    'personal.png',
+    {image:'portfolio.jpeg', name:'Portfolio'},{image:'portfolio.jpeg', name:'Portfolio'},
 ];
 
-const projectsPersonal = availableImages.map(image => ({
-  name: image.split('.')[0],
-  imagePath: `${publicImagesPath}${image}`
+const projectsPersonal = availableImages.map(({ image, name }) => ({
+    name,
+    imagePath: `${publicImagesPath}${image}`
 }));
 
 export default projectsPersonal;

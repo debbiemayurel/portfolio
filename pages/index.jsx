@@ -6,6 +6,7 @@ import ListTecnhologies from '@/components/ui/ListTecnhologies';
 import ExperenceWork from '@/components/utils/ExperenceWork';
 import SwiperProjects from '@/components/utils/SwiperProjects';
 import projectsWork from '@/utils/ListProjectsWork';
+import projectsPersonal from '@/utils/ListProjectsPersonal';
 
 const IndexPage = () => {
     return (
@@ -56,6 +57,9 @@ const IndexPage = () => {
                 </Box>
                 <Box>
                     <SwiperProjects title='Completed Projects' listProjects={projectsWork}/>
+                </Box>
+                <Box>
+                    <SwiperProjects title='Completed Personal Projects' listProjects={projectsPersonal}/>
                 </Box>
             </Container>
         </Layout>
