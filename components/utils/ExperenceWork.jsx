@@ -5,7 +5,7 @@ import { Box, Typography } from '@mui/material';
 
 const listExperenceWork = [
     {
-        company:'BcY Computación C.A.',
+        company:'B y C Computación C.A.',
         dateInit:dayjs('09-07-2023', 'DD-MM-YYYY'),
         text:`Development of a Help Center in BcY Computación, where through a web application dynamic Help Centers can be created depending on the user's needs.\nDevelopment of a Support Center app where users can manage tasks and assistance, aimed especially at the Call Center, allowing for orderly and efficient management of coordination with attendees, allowing the generation of attendee performance reports along with the number of assistance attended, In addition to providing flexibility when creating a user, it shows granting specific permissions to each user depending on the needs of the coordinator.`,
         dateFinish:dayjs(),
