@@ -37,7 +37,6 @@ const Navbar = () => {
                         Contact
                     </Button>
                 </Box>
-                
             </Box>
         </Grid>
     </Grid>
