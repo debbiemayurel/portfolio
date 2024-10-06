@@ -27,15 +27,6 @@ const Navbar = () => {
                     <Button variant='text'>
                         About Us
                     </Button>
-                    <Button variant='text'>
-                        Portfolio
-                    </Button>
-                    <Button variant='text'>
-                        Service
-                    </Button>
-                    <Button variant='text'>
-                        Contact
-                    </Button>
                 </Box>
             </Box>
         </Grid>
