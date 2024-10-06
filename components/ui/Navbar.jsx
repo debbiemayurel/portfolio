@@ -25,7 +25,7 @@ const Navbar = () => {
                         Home
                     </Button>
                     <Button variant='text'>
-                        About Us
+                        About Me
                     </Button>
                 </Box>
             </Box>
