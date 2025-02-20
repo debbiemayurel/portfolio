@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, useTheme } from '@mui/material'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards } from 'swiper/modules';
 // Import Swiper styles
@@ -8,7 +8,8 @@ import 'swiper/css/effect-cards';
 
 const SwiperProjects = ({listProjects, title}) => {
     const [currentImage, setCurrentImage] = useState(listProjects[0]);
-    console.log('imagen actual', currentImage)
+    const theme = useTheme();
+    //console.log('imagen actual', currentImage)
     const handleSlideChange = (swiper) => {
         const currentIndex = swiper.activeIndex;
         setCurrentImage(listProjects[currentIndex]);
@@ -25,8 +26,8 @@ const SwiperProjects = ({listProjects, title}) => {
                 onSlideChange={handleSlideChange}
                 className="mySwiper"
                 style={{
-                    width: '620px',
-                    height: '320px',
+                    width: theme.breakpoints.down('sm') ? '300px' : '620px',
+                    height: theme.breakpoints.down('sm') ? '200px' : '320px',
                     //margin: '0px'
                 }}
             >

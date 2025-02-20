@@ -20,9 +20,12 @@ const Navbar = () => {
                 <Box>
                     <Typography variant='h4' color='primary' ml={2} onClick={()=>{push('/')}} sx={{ cursor:'pointer'}}>JuamPi</Typography>
                 </Box>
-                <Box>
+                <Box sx={{display:{xs:'none', sm:'none', md:'flex'}, gap:1}}>
                     <Button variant='text'>
                         Home
+                    </Button>
+                    <Button variant='text'>
+                        Contact Me
                     </Button>
                     <Button variant='text'>
                         About Me

@@ -10,7 +10,7 @@ const ListTecnhologies = () => {
             </Typography>
             <Grid container spacing={1} mt={2}>
                 {technologies.map((tech, index) => (
-                    <Grid item xs={6} sm={4} md={1.5} key={tech.name}>
+                    <Grid item xs={3} sm={4} md={1.5} key={tech.name}>
                         <Box
                             display="flex"
                             flexDirection="column"
@@ -19,7 +19,7 @@ const ListTecnhologies = () => {
                             p={2}
                             sx={{
                                 border: '1px solid white',
-                                borderRadius: index === 0 ? '12px 0 0 12px' : index === technologies.length - 1 ? '0 12px 12px 0':'',
+                                borderRadius: {xs:0, sm:0, md:index === 0 ? '12px 0 0 12px' : index === technologies.length - 1 ? '0 12px 12px 0':''},
                                 transition: 'transform 0.3s ease-in-out',
                                 '&:hover': {
                                     transform: 'scale(1.01)',

@@ -31,7 +31,7 @@ const Scene = () => {
                 scene.add(gltf.scene);
                 // Ajusta la posición y escala del modelo
                 gltf.scene.position.set(0, 0, 0);
-                gltf.scene.scale.set(3, 2.5, 3);
+                gltf.scene.scale.set(2.5, 2, 2.5);
 
                 // Centra la cámara en el modelo
                 const box = new THREE.Box3().setFromObject(gltf.scene);
